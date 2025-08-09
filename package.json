@@ -1,5 +1,5 @@
 {
-	"name": "limine",
+	"name": "limine-monorepo",
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
@@ -11,10 +11,11 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.1.3",
 		"@tc96/biome-config": "^1.1.3",
+		"@workspace/typescript-config": "workspace:*",
 		"turbo": "^2.5.5",
 		"typescript": "5.8.3"
 	},
-	"packageManager": "pnpm@10.0.0",
+	"packageManager": "pnpm@10.4.1",
 	"engines": {
 		"node": ">=20"
 	}
