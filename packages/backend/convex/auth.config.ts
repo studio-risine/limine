@@ -12,7 +12,7 @@ export default {
 					);
 				}
 				return process.env.CLERK_JWT_ISSUER_DOMAIN;
-			})(),
+			domain: getClerkJwtIssuerDomain(),
 			applicationID: "convex",
 		},
 	],
