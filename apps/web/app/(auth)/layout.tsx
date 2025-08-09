@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
+import AuthLayout from "@/modules/auth/ui/layouts/auth-layout";
 
 export default function Layout({ children }: { children: ReactNode }) {
-	return (
-		<div className="flex h-svh justify-center items-center">{children}</div>
-	);
+	return <AuthLayout>{children}</AuthLayout>;
 }

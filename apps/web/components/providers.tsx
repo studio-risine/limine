@@ -3,7 +3,6 @@
 import { useAuth } from "@clerk/nextjs";
 import { ConvexReactClient } from "convex/react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
-
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import type * as React from "react";
 
