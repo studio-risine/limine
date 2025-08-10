@@ -1,3 +1,4 @@
+import { NotAuthenticatedError } from "../../errors";
 import { mutation, query } from "./_generated/server";
 
 export const getMany = query({
@@ -15,14 +16,16 @@ export const create = mutation({
 		const identify = await ctx.auth.getUserIdentity();
 
 		if (identify === null) {
-			throw new Error("Not authenticated");
+			throw new NotAuthenticatedError();
 		}
 
-		const userId = await ctx.db.insert("users", {
+		const _userId = await ctx.db.insert("users", {
 			name: "Gabs",
 			email: "gbs@gmail.com",
 		});
 
-		return userId;
+		throw new Error("Tracking user");
+
+		// return _userId;
 	},
 });

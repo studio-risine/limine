@@ -9,7 +9,8 @@
 		"./convex": "./convex/*.ts"
 	},
 	"dependencies": {
-		"convex": "^1.25.4"
+		"convex": "^1.25.4",
+		"@workspace/errors": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/node": "^20.19.9",
