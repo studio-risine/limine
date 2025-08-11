@@ -9,7 +9,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
 		<>
 			<AuthLoading>
 				<AuthLayout>
-					<AuthLayout>Loading...</AuthLayout>
+					<div>Loading...</div>
 				</AuthLayout>
 			</AuthLoading>
 			<Authenticated>{children}</Authenticated>

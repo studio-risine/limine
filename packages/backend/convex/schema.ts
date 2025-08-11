@@ -6,10 +6,21 @@ export default defineSchema({
 		name: v.string(),
 		email: v.string(),
 	}),
-	deadlines: defineTable({
+
+	processes: defineTable({
 		register: v.string(),
-	}),
-	legalProcess: defineTable({
-		register: v.number(),
-	}),
+		client: v.string(),
+		opposingParty: v.union(v.string(), v.null()),
+		status: v.union(
+			v.literal("open"),
+			v.literal("closed"),
+			v.literal("pending"),
+			v.null(),
+		),
+	}).index("by_register", ["register"]),
+
+	deadlines: defineTable({
+		processId: v.id("processes"),
+		dueDate: v.string(),
+	}).index("processId", ["processId"]),
 });

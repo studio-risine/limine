@@ -15,5 +15,5 @@ export function OrganizationGuard({ children }: { children: React.ReactNode }) {
 		);
 	}
 
-	return <AuthLayout>{children}</AuthLayout>;
+	return <>{children}</>;
 }
